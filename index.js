@@ -79,22 +79,27 @@ module.exports = function (opts) {
                 "R": "-L+RR++R+L--L-R"
             },
             angle: 60,
-            iterations: 2,
+            iterations: 3,
             finalizer: {
-                "L": "F",
-                "R": "F"
-            }
+                "L": "1FF2F", //F originally.
+                "R": "1FF2F" //F originally.
+            },
+            vector: [1,0,0]
         })
     }
-     
+          
+             
     var hibert = function() {
         return fractal( {
             axiom: "X",
             rules: {
                 "X": "^<XF^<XFX-F^>>XFX&F+>>XFX-F>X->"
             },
-            iterations: 3
-        })
+            iterations: 3,
+            finalizer: {
+                "F":"1FF2F"
+            }
+        } );
     }
     
     var fractal = function(options) {
@@ -107,7 +112,7 @@ module.exports = function (opts) {
         if (!options.iterations) options.iterations = 1;
         var lsystem = new lsys(options.axiom,options.rules).iterate(options.iterations);
         if (options.finalizer) lsystem.apply(options.finalizer);
-        var turtlecoords = turtle(lsystem.string(), options.angle * (Math.PI / 180));
+        var turtlecoords = turtle(lsystem.string(), options.angle * (Math.PI / 180),options.vector);
         
         var xoffset = pos[0];
         var yoffset = pos[1];
@@ -150,7 +155,7 @@ module.exports = function (opts) {
             default:
                 return;
         }
-        create();
+        create(opts);
     }
     else if (opts.generate) {
         thing = opts.generate();
