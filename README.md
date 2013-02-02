@@ -5,6 +5,8 @@ Collection of things to be added.
 
 
 Example:
+    var putter = require('voxel-put-something')(game);
+    var creator = require('voxel-things');
 
     var castle = creator({
         object: "fractal",
