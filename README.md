@@ -51,7 +51,7 @@ Alternatively you can add complexity to the system by sheer will.
             "C":"^YYY", 
         
             "T":"+GGG[M]GG-GGGG+",
-            "M": "^[&R]FPPPQPPB", 
+            "M": "^PPPQPPB", 
             "P": "[&R]F[&R]F[&R]F",
             "R": "EH EH EH EH",
             "H": "YYY", 
@@ -67,8 +67,8 @@ Alternatively you can add complexity to the system by sheer will.
             "V": "+G- ZZZZEH ZZZZEH ZZZZEH ZZZZEH^G&"
         },
         iterations: 10
-        });
-        putter.put(castle);
+    });
+    putter.put(castle);
 
 
 But, for the best results things which you can describe recursively or which have low amounts of information. Where one thing is just like another like a mountain or a tree.
