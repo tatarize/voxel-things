@@ -81,8 +81,8 @@ module.exports = function (opts) {
             angle: 60,
             iterations: 3,
             finalizer: {
-                "L": "1FF2F", //F originally.
-                "R": "1FF2F" //F originally.
+                "L": "2F1FF", //F originally.
+                "R": "2F1FF" //F originally.
             },
             vector: [1,0,0]
         })
@@ -97,7 +97,7 @@ module.exports = function (opts) {
             },
             iterations: 3,
             finalizer: {
-                "F":"1FF2F"
+                "F":"2F1FF"
             }
         } );
     }
