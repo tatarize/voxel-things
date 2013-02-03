@@ -1,6 +1,6 @@
 {
   "name": "voxel-things",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "library of things",
   "preferGlobal": "false",
   "main": "index.js",
@@ -9,16 +9,19 @@
     "things",
     "tree",
     "voxel"
-  ],
+  ]
   "repository": {
     "type": "git",
-    "url": "https://github.com/tatarize/voxel-things.js.git"
-  },
+    "url": "https://github.com/tatarize/voxel-things.git"
+  }
   "dependencies": {
-    "lsys": "0.1.3",
-    "turtle3d": "0.0.3"
-  },
+    "lsys": "0.1.5",
+    "turtle3d": "0.0.4"
+  }
   "engines": {
     "node": "*"
   }
+  "_id": "voxel-things@0.0.2",
+  "readme": "ERROR: No README.md file found!",
+  "_from": "voxel-things@"
 }
